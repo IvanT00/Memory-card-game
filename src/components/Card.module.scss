@@ -1,0 +1,60 @@
+.card{
+  font-size: 64px;
+  background-color: #10141e;
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 3px solid #324652;
+  user-select: none;
+  transition-duration: 0.2s;
+  &:hover{
+    transform: scale(0.9);
+  }
+  &:active{
+    transform: scale(0.8);
+  }
+  &__back{
+    display: none;
+    //background-color: #554040;
+    background-color: #353430;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: 3px solid #705555;
+  }
+  &__flipped {
+    border: none;
+    &:hover{
+      transform: scale(1);
+    }
+    &:active{
+      transform: scale(1);
+    }
+    .card__front {
+      display: none;
+    }
+
+    .card__back {
+      display: flex;
+
+    }
+  }
+  &__matched{
+
+    .card__back{
+      border: none;
+    }
+    background: rgba(126, 211, 33, 0.2);
+    box-shadow: 0 0 20px rgba(126, 211, 33, 0.4);
+    border: 3px solid rgba(126, 211, 33, 0.5);
+  }
+}
+
+
+

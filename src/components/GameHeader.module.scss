@@ -1,0 +1,100 @@
+.gameHeader{
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 60px;
+  background-color: #10141e;
+  border-radius: 15px;
+  width: 900px;
+  cursor: pointer;
+  border: 1px solid #324652;
+  user-select: none;
+  &__title{
+    font-size: 64px;
+    letter-spacing: 8px;
+    font-weight: 400;
+    animation: blink 4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: forwards;
+  }
+  &__stats{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 64px;
+  }
+  &__score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  &__moves{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  &__scoreLabel{
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 4px;
+  }
+  &__movesLabel{
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 4px;
+  }
+  &__scoreValue{
+    font-size: 32px;
+    color: #c5c31b;
+  }
+  &__movesValue{
+    font-size: 32px;
+    color: #c51b62;
+  }
+  &__resetButton{
+    margin-top: 8px;
+    background-color: #10141e;
+    border: 1px solid #324652;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #fff;
+    padding: 8px 85px;
+    font-size: 24px;
+    transition-duration: 0.2s;
+    &:hover{
+      background-color: #324652;
+      border: 1px solid #4e6c7e;
+    }
+    &:active{
+      background-color: #24333b;
+      transform: scale(0.9);
+    }
+  }
+}
+
+@keyframes blink {
+  0%, 15% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  16% { opacity: 0.6; }
+  17% { opacity: 1; }
+  18% { opacity: 0.7; }
+  19% { opacity: 1; }
+  21% { opacity: 0.5; }
+  22% { opacity: 1; }
+  23% { opacity: 0.6; }
+  24% { opacity: 1; }
+  25%, 30% { opacity: 1; }
+  31% { opacity: 0.8; }
+  40% { opacity: 0.9; }
+  50% { opacity: 0.95; }
+  60% { opacity: 0.98; }
+  70%, 100% {
+    opacity: 1;
+    filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 100, 0.3));
+  }
+}
