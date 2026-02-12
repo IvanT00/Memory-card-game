@@ -132,6 +132,7 @@ const App = () => {
                     <CardComponent key={c.id} card={c} onClick={handleCardClick}/>
                 ))}
             </div>
+
         </div>
     );
 };
